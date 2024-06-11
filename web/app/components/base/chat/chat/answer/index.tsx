@@ -13,7 +13,6 @@ import AgentContent from './agent-content'
 import BasicContent from './basic-content'
 import SuggestedQuestions from './suggested-questions'
 import More from './more'
-import WorkflowProcess from './workflow-process'
 import { AnswerTriangle } from '@/app/components/base/icons/src/vender/solid/general'
 import { MessageFast } from '@/app/components/base/icons/src/vender/solid/communication'
 import LoadingAnim from '@/app/components/app/chat/loading-anim'
@@ -129,16 +128,7 @@ const Answer: FC<AnswerProps> = ({
                 />
               )
             }
-            {
-              workflowProcess && (
-                <WorkflowProcess
-                  data={workflowProcess}
-                  item={item}
-                  hideInfo
-                  hideProcessDetail={hideProcessDetail}
-                />
-              )
-            }
+
             {
               responding && !content && !hasAgentThoughts && (
                 <div className='flex items-center justify-center w-6 h-5'>
